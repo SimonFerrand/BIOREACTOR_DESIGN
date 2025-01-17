@@ -1,0 +1,36 @@
+BIOREACTOR_DESIGN/
+├── src/
+│   ├── config/
+│   │   └── config.py           # Configuration globale, limites opératoires, constantes physiques
+│   ├── equipment/
+│   │   ├── tanks/
+│   │   │   ├── bioreactor.py   # Classe principale du bioréacteur avec géométrie et propriétés thermiques
+│   │   │   └── process_tank.py # Tanks process pour CIP, média, tampons
+│   │   ├── heat_system/
+│   │   │   ├── electrical_heater.py    # Système de chauffe électrique avec PID
+│   │   │   ├── plate_exchanger.py      # Échangeur à plaques avec corrélations TEMA
+│   │   │   └── steam_generator.py      # Générateur vapeur avec contrôle
+│   │   ├── piping/
+│   │   │   └── pipeline.py     # Calculs pertes de charge et thermiques tuyauterie
+│   │   └── spray_devices/
+│   │       └── rotary_jet_mixer.py    # Modèle boule de lavage rotative
+│   └── process/
+│       ├── thermal/
+│       │   ├── cip_model.py           # Modèle CIP avec recirculation (à refactoriser)
+│       │   ├── heating.py             # Calculs de chauffe multi-modes
+│       │   ├── cooling.py             # Refroidissement naturel et forcé
+│       │   ├── losses.py              # Pertes thermiques multi-zones
+│       │   ├── thermal_calculations.py # Calculs thermiques standards
+│       │   └── thermal_utils.py       # Utilitaires et propriétés physiques
+│       └── mixing/
+│           └── jet_impact.py          # Calculs impact jets et cisaillement
+├── tests/
+│   ├── test_heating_performance.py     # Tests performances chauffage
+│   ├── test_heating.py                 # Tests unitaires chauffage
+│   ├── test_heating_system.py          # Tests système complet
+│   ├── test_plate_exchanger.py         # Tests échangeur à plaques
+│   ├── test_thermal_calculations.py    # Tests calculs thermiques
+│   └── test_thermal_utils.py           # Tests utilitaires thermiques
+├── notebook/
+│   └── heat_transfer_analysis.ipynb    # Analyses thermiques et dimensionnement
+└── README.md

@@ -1,0 +1,24 @@
+# Exclude specific config files
+notebooks/mechanical_stress_analysis.ipynb
+
+# Exclude specific images in docs
+docs/CIP.txt
+
+
+
+
+
+# Fichiers Python
+*.pyc
+__pycache__/
+
+# Environnements virtuels
+venv/
+.env/
+
+# Fichiers spécifiques à l'IDE
+.vscode/
+.idea/
+
+# Sorties de notebooks Jupyter
+*.ipynb_checkpoints
