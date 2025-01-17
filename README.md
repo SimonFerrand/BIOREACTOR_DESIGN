@@ -6,19 +6,20 @@ Un projet Python complet pour la modélisation et l'analyse thermique de bioréa
 ## État du Projet
 🚧 **En développement**
 
-- ✅ Modélisation thermique de base
-- ✅ Calculs CIP basiques
-- ✅ Analyses thermiques des échangeurs
-- 🚧 Module de recirculation (Section IV du notebook - En cours de restructuration)
+### Fonctionnalités complètes et validées :  
+- ✅ Configuration système (config.py) - Structure robuste avec constantes physiques et limites opératoires  
+- ✅ Modélisation des équipements de base (classes tank, géométrie)  
+- ✅ Calculs thermiques fondamentaux (pertes, propriétés physiques)  
 
-## Points d'Attention
-Le module de recirculation (Partie IV du notebook) nécessite une refactorisation majeure pour :
+### Fonctionnalités partiellement implémentées :  
+- 🟨 Chauffage par échangeur vapeur (Section I) - Calculs ok mais validation limitée  
+- 🟨 Chauffage par tank tampon (Section II) - Base fonctionnelle mais optimisation requise  
+- 🟨 Chauffage électrique statique (Section III) - Modèle de base ok mais PID à améliorer  
 
-- Améliorer la gestion des états thermiques
-- Optimiser les calculs de transfert de chaleur
-- Renforcer la robustesse du code
-- Implémenter une meilleure validation des paramètres
-- Ajouter des tests unitaires complets
+### Nécessitant une refonte majeure :  
+- ❌ Recirculation CIP (Section IV) - Structure instable, bugs multiples  
+- ❌ Tests unitaires - Couverture insuffisante  
+- ❌ Validation des modèles thermiques complexes
 
 ## Installation
 ```bash
@@ -27,7 +28,7 @@ cd BIOREACTOR_DESIGN
 pip install -r requirements.txt
 ```
 ## Lancer des calculs
-Un lien vers le notebook [heat_transfer_analysis.ipynb](notebook/heat_transfer_analysis.ipynb) permet d'effectuer des analyses thermiques et le dimensionnement.
+Un lien vers le notebook [heat_transfer_analysis.ipynb](notebooks/heat_transfer_analysis.ipynb) permet d'effectuer des analyses thermiques et le dimensionnement.
 
 ## Architecture du Projet
 ```plaintext
